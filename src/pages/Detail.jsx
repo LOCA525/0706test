@@ -1,14 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
-import { getTodoByID } from "../redux/modules/todos.js";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Detail = () => {
-  const dispatch = useDispatch();
   const todo = useSelector((state) => state.todos.todo);
   console.log(todo);
-  const { id } = useParams();
   const navigate = useNavigate();
 
   return (
